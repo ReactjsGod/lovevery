@@ -7,8 +7,8 @@
     "strict": true,
     "noEmit": true,
     "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "bundler",
+    "module": "commonjs", // Update this line
+    "moduleResolution": "node", // Update this line
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
@@ -18,10 +18,17 @@
         "name": "next"
       }
     ],
+    "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      "@component": ["./src/components/index.ts"],
+      "@interfaces": ["utils/Defs/interface.ts"],
+      "@types": ["utils/Defs/types.ts"],
+      "@Providers": ["src/components/Providers/ThemeProvider"],
+      "@Controllers": ["src/components/Controllers/index.ts"],
+      "@Validators": ["utils/Helpers/formValidations.ts"],
+      "@InitalVal": ["utils/Helpers/IntialsVals.ts"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", ".next/types/**/*.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
 }
