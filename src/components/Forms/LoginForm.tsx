@@ -62,8 +62,8 @@ const SignupForm = () => {
     }
   };
   return (
-    <div className="w-full h-screen flex justify-center items-center">
-      <div className="max-w-[550px]  rounded-2xl backdrop-blur-2xl text-black dark:text-white p-8 shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] dark:shadow-[rgba(255,_255,_255,_0.4)_0px_30px_90px]">
+    <div className="w-full h-full flex justify-center items-center">
+      <div className="max-w-[550px] my-10 rounded-2xl backdrop-blur-2xl text-black dark:text-white p-8 shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] dark:shadow-[rgba(255,_255,_255,_0.4)_0px_30px_90px]">
         <div className="flex flex-col">
           <Formik
             initialValues={step === 1 ? initialValuesStep1 : initialValuesStep2}
